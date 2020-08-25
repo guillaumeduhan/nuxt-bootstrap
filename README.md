@@ -1,20 +1,43 @@
-# nuxt-bootstrap-boilerplate
+# Nuxt Bootstrap Boilerplate
 
-## Build Setup
+![logo](https://repository-images.githubusercontent.com/217154004/2402a680-b66f-11ea-9125-22625960bc03)
 
-```bash
-# install dependencies
-$ npm install
+- Vue.js 3
+- Bootstrap 4
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+## Getting Started
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+Clone project and enter in folder:
 
-# generate static project
-$ npm run generate
+```
+cd nuxt-bootstrap-boilerplate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Run npm install:
+
+```
+npm i
+```
+
+Enjoy:
+
+```
+npm run serve
+```
+
+## Built With
+
+- [Nuxt](https://cli.vuejs.org/) - The Intuitive Vue Framework
+- [Bootstrap](https://getbootstrap.com/) - Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning.
+
+## Authors ✨
+
+- **guillaumeduhan** - _Initial work_ - [Github](https://github.com/guillaumeduhan)
+
+## License
+
+This project is licensed under the MIT License.
