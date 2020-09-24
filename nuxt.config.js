@@ -52,8 +52,8 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://bootstrap-vue.js.org
     "bootstrap-vue/nuxt",
+    "@nuxtjs/axios",
     "@nuxtjs/auth",
   ],
   /*
@@ -74,9 +74,27 @@ export default {
         })
       }
     },
+  }, // Heroku needs spa false
+  axios: {
+    baseURL: process.env.API_AUTH_URL
+  },
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: 'auth/local', method: 'post', propertyName: 'jwt' },
+          logout: { url: '/api/auth/logout', method: 'post' },
+          user: { url: 'users/me', method: 'get', propertyName: false }
+        },
+        // tokenRequired: true,
+        tokenType: 'bearer',
+        // globalToken: true,
+        // autoFetchUser: true
+      }
+    }
   },
   server: {
     port: process.env.PORT || 3000, // Heroku needs free port
   },
-  ssr: false // Heroku needs spa false
+  ssr: false
 }
