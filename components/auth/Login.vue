@@ -37,9 +37,6 @@ export default {
             password: this.password
           }
         })
-        .then(() => {
-          console.log("cool")
-        })
       } catch (err) {
         console.log(err)
       }
