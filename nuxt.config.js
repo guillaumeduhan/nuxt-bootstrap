@@ -83,6 +83,7 @@ export default {
       local: {
         endpoints: {
           login: { url: 'auth/local', method: 'post', propertyName: 'jwt' },
+          // remplacer jwt par la key du token
           logout: false,
           user: { url: 'users/me', method: 'get', propertyName: false }
         },
