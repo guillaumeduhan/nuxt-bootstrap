@@ -3,11 +3,11 @@
     <div>
       <div>
         <label for="user-mail">E-mail</label>
-        <b-input id="user-mail" v-model="email" type="email" />
+        <b-input id="user-mail" v-model="account.email" type="email" />
       </div>
       <div>
         <label for="password">Password</label>
-        <b-input id="password" v-model="password" type="password" />
+        <b-input id="password" v-model="account.password" type="password" />
       </div>
     </div>
     <b-button variant="primary" @click="submitLogin">Submit</b-button>
@@ -15,32 +15,24 @@
 </template>
 
 <script>
+import {
+ LOGIN
+} from '../../constants/actions-type'
+
 export default {
   name: "Login",
   data() {
     return {
-      email: "guillaume@gmail.com",
-      password: "86327417",
+      account: {
+       email: undefined,
+       password: undefined,
+      }
     }
   },
   methods: {
-    mailValidator() {
-      /* eslint-disable */
-      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      return re.test(String(this.email).toLowerCase());
-    },
-    async submitLogin() {
-      try {
-        let response = await this.$auth.loginWith('local', {
-          data: {
-            identifier: this.email, // identifier for strapi
-            password: this.password
-          }
-        })
-      } catch (err) {
-        console.log(err)
-      }
-    },
+    submitLogin() {
+     this.$store.dispatch(LOGIN, this.account)
+    }
   },
 }
 </script>

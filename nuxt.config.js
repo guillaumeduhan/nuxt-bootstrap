@@ -25,10 +25,10 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || "",
-      },
+        content: process.env.npm_package_description || ""
+      }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   /*
   ** Global CSS
@@ -53,8 +53,18 @@ export default {
    */
   modules: [
     "bootstrap-vue/nuxt",
-    "@nuxtjs/axios",
-    "@nuxtjs/auth",
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+
+        },
+        services: {
+          auth: true, // Just as example. Can be any other service.
+          firestore: true
+        }
+      }
+    ]
   ],
   /*
    ** Build configuration
@@ -70,10 +80,10 @@ export default {
           enforce: "pre",
           test: /\.(js|vue)$/,
           loader: "eslint-loader",
-          exclude: /(node_modules)/,
+          exclude: /(node_modules)/
         })
       }
-    },
+    }
   },
   axios: {
     baseURL: process.env.API_AUTH_URL

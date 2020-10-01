@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    {{ $auth.user }}
-  </div>
+  <div class="container" />
 </template>
 
 <script>
