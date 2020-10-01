@@ -19,8 +19,8 @@ export default {
   name: "Login",
   data() {
     return {
-      email: "guillaume@gmail.com",
-      password: "86327417",
+      email: undefined,
+      password: undefined,
     }
   },
   methods: {
