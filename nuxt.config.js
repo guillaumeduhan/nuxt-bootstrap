@@ -1,5 +1,9 @@
 
 export default {
+  bootstrapVue: {
+    bootstrapCSS: false,
+    bootstrapVueCSS: false,
+  },
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
@@ -28,8 +32,7 @@ export default {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: ["@/assets/custom.scss"],
   /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
@@ -44,8 +47,7 @@ export default {
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: [
-  ],
+  buildModules: ["@nuxtjs/eslint-module"],
   /*
   ** Nuxt.js modules
   */
@@ -58,5 +60,22 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
-  }
+    extractCSS: true,
+    friendlyErrors: false,
+    extend(config, ctx) {
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: "pre",
+          test: /\.(js|vue)$/,
+          loader: "eslint-loader",
+          exclude: /(node_modules)/,
+        })
+      }
+    },
+  },
+  server: {
+    port: process.env.PORT || 3000, // Heroku needs free port
+  },
+  ssr: false // Heroku needs spa false
 }
