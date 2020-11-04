@@ -1,6 +1,6 @@
 # Nuxt Bootstrap Boilerplate
 
-![logo](https://repository-images.githubusercontent.com/290322329/3c527880-e727-11ea-9754-011973b77949)
+![logo](https://repository-images.githubusercontent.com/290322329/8308df80-1edb-11eb-8593-dece3eb988e4)
 
 - Vue.js 3
 - Bootstrap 4
