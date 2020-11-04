@@ -1,7 +1,7 @@
 # Nuxt/Bootstrap Boilerplate v1.1.0
 
-🦾 Starter boilerplate to create a web app with Nuxt.js & Bootstrap
-📦 Nuxt.js, BootstrapVue
+🦾 Starter boilerplate to create a web app with Nuxt.js & Bootstrap\
+📦 Nuxt.js, BootstrapVue\
 ⌚ Last update: 11/4/2020
 
 ![logo](https://repository-images.githubusercontent.com/290322329/8308df80-1edb-11eb-8593-dece3eb988e4)
@@ -32,23 +32,23 @@ npm run serve
 
 ## About nuxt.config.js
 
-### BootstrapVue
+### bootstrapVue
 
 [BootstrapVue](https://bootstrap-vue.org/) is configured to be build from @/assets/custom.css.
 
-### Mode
+### mode
 
 By default, this boilerplate is on SPA mode.
 
-### Target
+### target
 
 By default, this boilerplate is on server target.
 
-### Plugins
+### plugins
 
 Put in here all your plugins from @/plugins folder.
 
-### Components
+### components
 
 By default, on true. Auto-import components.
 
@@ -56,19 +56,19 @@ By default, on true. Auto-import components.
 
 By default, import eslint module.
 
-### Modules
+### modules
 
 By default, import bootstrap-vue/nuxt module.
 
-### Build
+### build
 
 By default, extractCSS true, friendlyErrors on false and run eslint on save.
 
-### Server
+### server
 
 By default, app run on port 3000 or process.env.PORT for Heroku deployments.
 
-### SSR
+### ssr
 
 By default, on false.
 
