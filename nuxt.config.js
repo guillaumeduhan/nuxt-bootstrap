@@ -37,8 +37,7 @@ export default {
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
-  plugins: [
-  ],
+  plugins: [],
   /*
   ** Auto import components
   ** See https://nuxtjs.org/api/configuration-components
