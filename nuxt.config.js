@@ -8,7 +8,7 @@ export default {
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
   */
-  mode: 'spa',
+  ssr: false,
   /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
@@ -75,6 +75,5 @@ export default {
   },
   server: {
     port: process.env.PORT || 3000, // Heroku needs free port
-  },
-  ssr: false // Heroku needs spa false
+  }
 }
